@@ -8,6 +8,8 @@ import random
 
 # --- PAGE CONFIGURATION ---
 st.set_page_config(
+    # --- PAGE CONFIGURATION ---
+st.set_page_config(
     page_title="Kr8tiv AI Studios | Pro Studio Shots Instantly",
     page_icon="📸",
     layout="wide",
