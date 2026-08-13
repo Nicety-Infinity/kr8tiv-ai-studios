@@ -67,7 +67,7 @@ def decrement_spot():
         conn.commit()
 
 # --- SIDEBAR NAVIGATION ---
-st.sidebar.image("https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=300&q=80", use_column_width=True)
+st.sidebar.image("https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=300&q=80", use_container_width=True)
 st.sidebar.title("Kr8tiv AI Studios")
 st.sidebar.markdown("*“Turn crappy phone pics into pro studio shots with AI.”*")
 
