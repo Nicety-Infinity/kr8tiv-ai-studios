@@ -6,15 +6,55 @@ import io
 import zipfile
 import random
 
-# --- PAGE CONFIGURATION ---
+# --- PAGE CONFIGURATION & MOBILE APP STYLING ---
 st.set_page_config(
-    # --- PAGE CONFIGURATION ---
-st.set_page_config(
-    page_title="Kr8tiv AI Studios | Pro Studio Shots Instantly",
+    page_title="Kr8tiv AI Studios",
     page_icon="📸",
-    layout="wide",
-    initial_sidebar_state="expanded"
+    layout="centered",
+    initial_sidebar_state="collapsed"
 )
+
+# Custom CSS to force a mobile app aesthetic
+st.markdown("""
+<style>
+    /* Force mobile app container width and remove desktop padding */
+    .block-container {
+        padding-top: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        max-width: 480px !important;
+    }
+    
+    /* Style all primary action buttons to look like native touch app buttons */
+    .stButton>button {
+        width: 100% !important;
+        border-radius: 14px;
+        height: 3.2rem;
+        font-weight: 600;
+        font-size: 1rem;
+        background: linear-gradient(135deg, #FF4B4B 0%, #FF8F8F 100%);
+        color: white;
+        border: none;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    /* Card containers / metrics */
+    div[data-testid="stMetric"] {
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    /* Hide standard desktop header elements */
+    header {visibility: hidden;}
+    
+    /* Smooth mobile font scaling */
+    h1 { font-size: 1.8rem !important; }
+    h2 { font-size: 1.4rem !important; }
+    h3 { font-size: 1.1rem !important; }
+</style>
+""", unsafe_allow_html=True)
 
 # --- DATABASE SETUP ---
 def init_db():
